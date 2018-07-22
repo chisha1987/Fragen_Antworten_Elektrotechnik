@@ -1,0 +1,505 @@
+\documentclass[12pt,a4paper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fourier}
+\usepackage{mathrsfs}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Ulrich Meisl e1000217}
+\title{Fragen aus dem Buch: Vorlesung über die Grundlagen der Elektrotechnik}
+
+\newcommand{\nqu}[1]{\vspace*{10mm} \noindent \textbf{#1} \par \vspace*{1mm}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\chapter{Zeit. Raum. Bewegung}
+
+\nqu{1. Warum wurde die Definition der Zeiteinheit auf der Grundlage der Erdrotation aufgegeben?}
+Der wahre Sonnentag hat eine merkbar unregelmäßige Dauer. (Schiefe der Ekliptik, Ellipsenform der Erdbahn) 
+
+\nqu{2. Welche Geräte werden heute zur Darstellung der Zeiteinheit verwendet? Warum gibt es gelegentlich Schaltsekunden?}
+Mit hoch präzisen Cäsium-Atomuhren. Damit werden UT1 (Universal Time) und TAI (Atomzeit) in Übereinstimmung gehalten.
+
+\nqu{3. Warum gibt es unterschiedliche Geometrien? Welches Modell der physikalischen Geometrien verwenden wir im täglichen Leben und in der klassischen Physik?}
+Die euklidische Geometrie, welche wir im täglichen Leben verwenden, ist nicht geeignet um die Probleme der klassischen Physik zu lösen. Hier verwenden wir die nichteuklidische Geometrie, ''gekrümmter Raum''.
+
+\nqu{4. Wie wurde früher und wie heute die Basiseinheit der Länge festgelegt?}
+\[\textrm{früher:}~ \frac{Erdumfang}{4 \cdot 10^7} \]
+\[\textrm{heute:}~ \frac{c_0 \cdot 1s}{299792458} \]
+
+\nqu{5. Wozu dienen Koordinaten? Was ist eine Koordinatentransformation?}
+Um jeden Ort eine genaue Adresse zu geben. Um die Koordinaten eines Ortes in Koordinaten eines anderen Koordinatensystems umzurechnen.
+
+\nqu{6. Wie konstruiert man ein kartesisches Koordinatensystem?}
+x-Achse und y-Achse stehen normal zueinander. Wenn man nun die x-Achse auf kürzestem Weg in Richtung der y-Achse schwenkt, ergibt sich die Richtung der z-Achse im Sinn der Rechtsschraube. $ \vec{e}_z = \vec{e}_x \times \vec{e}_y$
+
+\nqu{7. Wozu verwenden wir Vektoren? was ist ein Ortsvektor?}
+Vektoren dienen dazu um physikalischen Größen einen Richtungssinn zu geben.
+Der Ortsvektor $\vec{r}_{LP}$ ist der Vektor welcher vom Punkt L nach P zeigt.
+
+\nqu{8. Was bedeutet die Begriffe ''Entwicklung(Zerlegung)'', ''Komponenten'', und ''Entwicklungskoeffizienten (Koeffizienten, Koordinaten)'' eines Vektors?}
+\[\vec{r}_{LP} = \underbrace{(x_P - x_L)\vec{e}_x}+(y_P-x_L)\vec{e}_y+\underbrace{(z_P-z_L)}\vec{e}_z\]
+\[\underbrace{Komponente \hspace{1cm}Koeffizient}\]
+\[Entwicklung\]
+
+\nqu{9. Was bedeutet ''Bewegung''?}
+Eine Bewegung ist eine Ortsveränderung über die Zeit.
+
+\nqu{10. Was ist ''Geschwindigkeit'', was ''Beschleunigung'', und durch welche mathematischen Objekte werden diese Größen erfasst?}
+Geschwindigkeit: Ortsveränderung über die Zeit.
+
+Beschleunigung: Änderung der Geschwindigkeit über die Zeit.
+
+Beide werden über Vektoren erfasst.
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Körper und Teilchen. Masse und Stoffmenge.}
+
+\nqu{1. Aus welchen Bestandteilen sind Atome aufgebaut? Wodurch unterscheiden sich die Atome unterschiedlicher Elemente voneinander?}
+Atome sind aus Protonen, Neutronen (Kern) und Elektronen aufgebaut.
+Atome unterscheiden sich an der Anzahl der Protonen und Elektronen. Eine weiteres Unterscheidungsmerkmal ist die Anzahl der Neuronen (Isotope).
+
+\nqu{2. Wodurch unterscheiden sich feste, flüssige und gasförmige Körper im wesentlichen?}
+Sie unterscheiden sich durch die Dichte der Atome.
+Bei gleichem Element auch durch den Energieinhalt.
+
+\nqu{3. Was versteht man unter kristalliner Struktur? Wie groß sind etwa die Abstände benachbarter Gitterplätze?}
+Unter kristalliner Struktur versteht man eine regelmäßige Anordnung der Atome.
+Der Abstand zweier Atome liegt dabei in der Größenordnung $10^{-10}$m. Als Einheit wird daher üblicherweise {\AA}ngström verwendet: $1${\AA}:=$10^{-10}$m$ = 0,1$nm.
+
+\nqu{4. Wie lautet das Trägheitsprinzip der klassischen Mechanik?}
+Wenn man einen Körper sich selbst überlasst, ihn nicht beeinflusst, dann bewegt we sich geradlinig weiter mit konstanter Geschwindigkeit, falls er ursprünglich bewegt war, oder er bleibt in Ruhe, falls er ursprünglich in Ruhe war.
+
+\nqu{5. Worin äußert sich die Eigenschaft ''Masse''?}
+Sie beschreibt eine Eigenschaft von Körpern, die sich sowohl in der Trägheit gegenüber Änderungen des Bewegungszustands, als auch in der Anziehung auf anderer Körper(Gravitation) äußert.
+
+\nqu{6. Wie heißt die Basiseinheit der Masse und wodurch ist sie festgelegt?}
+Die Einheit der Masse, das Kilogramm (Einheitenzeichen kg), wird seit 1885 bis heute durch einen in der Nähe von Paris aufbewahrten Metallkörper repräsentiert.
+
+\nqu{7. Wie bestimmen Sie im Prinzip die Massendichte bei gleichförmiger und bei ungleichförmiger Massenverteilung?}
+Bei gleichförmiger Massenverteilung ist die (mittlere) Massendichte \[\varrho=m/V.\]
+Bei nicht gleichförmiger Verteilung können wir den Körper gedanklich in n Teilkörper zerlegen. Für jeden Teilkörper k gilt \[\varrho_{k}=m_{k}/V_{k}\].
+
+\nqu{8. Wie findet man bei bekannter, i.a. von Punkt zu Punkt in einem Körper veränderlicher Massendichte die Gesamtmasse des Körpers?}
+\[m=\int_{k=1}^{n} \varrho_{k} V_{k}\ \]
+
+\nqu{9. Was bedeutet die Einheit 1 mol und wie hängt sie mit der Avogadro-Konstanten zusammen?}
+Wenn ein Körper die Stoffmenge 1 mol hat, so besteht er aus ebenso vielen Teilchen wie Atome in 0,0012 kg des Kolenstoffnuklids $^{12}$C enthalten sind. ''Eben soviel Einzelteilchen bedeutet hier die Avogadro-Konstante \[N_{A}=6,022\cdot10^{23} mol^{-1}\].
+
+\nqu{10. Warum müssen Sie bei der Angabe der Stoffmenge immer auch die Art der Substanz bzw. der Teilchen angeben?}
+Ein Teilchen kann sowohl ein Atom sein oder ein Molekül, Moleküle bestehen aber aus mehreren Atomen.
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Impulse und Kraft. Kraftfelder. Allgemeine Felder}
+
+\nqu{1. Was verstehen Sie unter dem Impulse eines Körpers und wie hängt diese Größe mit der resultierenden Kraft auf den Körper zusammen? Welche Rolle spielt dabei der Begriff des Inertialssystems?}
+Der Impulse ist die zeitliche Änderungsrate ist glich der Kraft welche auf den Körper wirkt.
+\[\vec{p}=m\cdot\vec{v}\]
+\[\vec{F= m\cdot \vec{a}}=\frac{d}{dt}\vec{p}\]
+
+Die Kraft ist die Wechselwirkung unterschiedlichen Ursprungs zwischen Körpern.
+Die Kinetische Grundgleichung ist in ihrer einfachen Form nur dann richtig, wenn die Beschleunigung und die Kraft in einem Intertialsystem bestimmt werden.
+
+\nqu{2. Wie nennen wir die Einheit der Kraft und wie hängt diese mit den Einheiten der Zeit, Länge und Masse zusammen?}
+Die Einheit der Kraft nennen wie Newton. Die Kraft ist Masse mal Beschleunigung.
+\[N=kg\cdot \frac{m}{s^2}\]
+
+\nqu{3. Was müssen Sie bei der Anwendung der kinetischen Grundgleichung auf ausgedehnte Festkörper beachten?}
+Bei einem ausgedehnten Körper können wir die resultierende Kraft, welche aus allen allen auf ihn Wirkenden Kräften besteht, in einem Punkt dem Massenmittelpunkt (''Schwerpunkt'') annähmen.
+
+\nqu{4. Wie kommt man vom Gravitationsgesetz zum Begriff des Gravitationsfeldes?}
+\[\frac{\vec{F}}{m_2}=\vec{f}=-G\frac{m_1}{r^2}\vec{e}~~~[N/kg]\]
+
+\nqu{5. Wie groß ist die Elektrisch Ladung eines Elektrons, eines Protons, eines Neutrons?}
+Elektron $Q_{Elektron}=-e$, Proton $Q_{Proton}=+e$ und Neutron $Q_{Neutron}=0$, mit der Elementarladung $e=1.602\cdot 10^{-19}$
+
+\nqu{6. Was sagt das Coulomb-Gesetz aus? Geben Sie auch seine Voraussetzungen an.}
+Zwei Körper wirken aufeinander entlang ihrer Verbindungslinie mit einer Kraft, die proportional dem Produkt ihrer elektrischen Ladungen und umgekehrt proportional dem Produkt ihrer elektrischen Ladungen und umgekehrt proportional dem Quadrat ihres abstands ist. 
+\[\vec{F}=\frac{1}{4\pi \varepsilon_0}\cdot \frac{Q_1Q_2}{r^2}\vec{e}~~~~~~ mit~~~~~~ \varepsilon_0 =8.854\cdot 10^{-12} C^2/(Nm)^2\]
+
+\nqu{7. Wie kommt man vom Coulomb-Gesetz zum Begriff des elektrischen Feldes?}
+\[\frac{\vec{F}}{Q_2}=\vec{E}=\frac{1}{4\pi \varepsilon_0}\frac{Q_1}{r^2}\vec{e}\]
+
+\nqu{8. Welche Gemeinsamkeiten besitzen die Größe Masse und elektrische Ladung und wodurch unterscheiden sie sich?}
+Sie erzeugen beide ein physikalischen Feld um sich herum, die Masse das Schwerefeld, die Ladung das elektrische Feld.
+Im Gegensatz zur Ladung kann die Masse keine negativen Werte annehmen.
+
+\nqu{9. Was versteht man unter physikalischen Feldern und wie werden sie mathematisch erfasst? Geben Sie Beispiele an für physikalische Felder mit Richtungscharakter und ohne Richtungscharakter.}
+Unter physikalischen Feldern verstehen wir Kraft- und Strömungsfelder. Felder mit Richtungssinn (z.B. Gravitationsfeld) werden durch Vektorfelder dargestellt, Felder ohne Richtungssinn (z.B. Temperatur) durch Skalarfelder.
+
+\nqu{10. Kann man Strömungen oder Flüssen immer eine lokale Geschwindigkeit zuordnen? Erläutern Sie den Sachverhalt anhand von Beispielen.}
+Nein kann man nicht, da in manchen Fällen die physikalische Begriffsbildung eine sinnvole Zuordnung von Geschwindigkeit überhaupt nicht zulässt.
+Als Beispiel dient der Wärmestrom in einem Festkörper.
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Arbeit und Leistung. Energie. Wärme und Temperatur}
+
+\nqu{1. Was bedeutet ''Arbeit verrichten'', was ''Leistung erbringen'' im physikalischen Sinn?}
+Physikalische Arbeit zu verrichten heißt immer, Körper im Raum zu verschieben und in Richtung der Verschiebung eine Kraft aufzubringen \[A=F\cdot s\].
+Leistung ist Arbeit pro Zeit \[P=A/t\].
+
+\nqu{2. Wie berechnet man die Normalprojektion einer Kraft auf eine vorgegebene Richtung? Wie wird die Arbeit berechnet, die ein Kraftfeld bei der Verschiebung eines Körpers entlang einer beliebigen Kurve verrichtet?}
+\[F_s = F \cdot cos(\alpha)\]
+\[A(\mathscr{C})=\sum\limits_{k=1}^n F_{sk} \cdot s_k\]
+
+(Abb.4.3)
+
+\nqu{3. Was versteht man unter einem ''konservativen Kraftfeld''?}
+Wenn ich ein konservatives Kraftfeld auf einer geschlossenen Kurve durchlaufe so ist die Summe immer Null.
+
+\nqu{4. Wie heißt die Einheit der Leistung und wie hängt sie mit anderen Einheiten zusammen? Was bedeutet 1 kWh?}
+Die Einheit der Leistung heißt Watt.
+\[1~W=1~J/s=1~N~m/s=1~kg~m^2/s^3\]
+\[1~kWh =1000~W\cdot 3600~s=3,6\cdot 10^6J \]
+
+\nqu{5. Was besagt das Prinzip der Erhaltung der Energie? Geben Sie ein Beispiel an. Welche Energieformen kennen Sie?}
+
+\nqu{6. In welchen Einheiten werden Energieströme angegeben?}
+
+\nqu{7. Warum nimmt Wärme unter den Energieformen eine Sonderstellung ein?}
+
+\nqu{8. Was beschreibt die physikalische Größe ''Temperatur''?}
+
+\nqu{9. Wie ist die Einheit der thermodynamischen Temperatur erklärt? Wie hängt die thermodynamische Temperatur und die Celsius-Temperatur zusammen?}
+
+\nqu{10. Wie misst man die Temperatur von Körpern? Geben Sie Beispiele für dazu benutzte physikalische Effekte an.}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Schwingungen und Wellen. Licht}
+
+\nqu{1. Was verstehen Sie unter einer Schwingung?}
+Schwingungen sind zeitliche Vorgänge, bei dem physikalische Größen abwechselnd zu- und abnehmen. Bei Periodischen Schwingungen ist dieser Vorgang immer wiederkehrend gleichartig.
+
+(Abb.5.2)
+
+\nqu{2. Was bedeutet ''Periodendauer'' und was ''Frequenz''? Wie nennt man allgemein die Einheit der Frequenz und wie hängt sie mit der Basiseinheit der Zeit zusammen?}
+Die Periodendauer ist der kürzeste Zeitabschnitt nach dem sich der Vorgang wiederholt. Die Frequenz gibt an wie oft sich ein periodischer Vorgang in einer Sekunde wiederholt.
+\[f=1/T\]
+Die Einheit der Frequenz ist 1/s, sie wird auch Herz (Einheitenzeichen Hz) genannt.
+
+\nqu{3. Was ist eine harmonische Schwingung und wie kann man sie mathematisch darstellen? Was gibt die Amplitude einer harmonischen Schwingung an?}
+
+
+\nqu{4. Wie hängt die Kreisfrequenz mit der Periodendauer und mit der Frequenz zusammen?}
+\[\textrm{Kreisfrequenz:}~~~~\omega = \frac{2\pi}{T}= 2\pi f\]
+
+\nqu{5. Was verstehen Sie unter einer Welle? Geben Sie ein Beispiel an.}
+
+\nqu{6. Wie groß ist die Ausbreitungsgeschwindigkeit elektromagnetischer Wellen im leeren Raum? Wie groß ist etwa die Ausbreitungsgeschwindigkeit von Schall in Luft und Wasser?}
+Die Ausbreitungsgeschwindigkeit von elektromagnetischer Wellen im leeren Raum ist die Vakuumlichtgeschwindigkeit $c_0$. Die Ausbreitungsgeschwindigkeit von Schall in Luft ist ca. 340 m/s, in Wasser ca. 1460 m/s.
+
+\nqu{7. Was ist eine harmonische Welle und wie kann man sie mathematisch darstellen?}
+
+\nqu{8. Was bedeutet ''Wellenlänge'' und ''Kreiswellenzahl'' und wie hängen diese beiden Größen zusammen? Durch welche Beziehung sind die Ausbreitungsgeschwindigkeit, die Wellenlänge und die Frequenz einer Welle im einfachsten Fall miteinander verknüpft?}
+
+\nqu{9. Wie groß ist etwa die Wellenlänge und die Frequenz von sichtbarem Licht?}
+Das sichtbare Licht erstreckt sich von der Wellenlänge $\lambda =380$nm bis zu $\lambda=780$nm (789 THz bis 384 THz).
+
+\nqu{10. Die Candela ist die Basiseinheit für welche physikalische Größe?}
+Candela (Einheitenzeichen cd) ist die Basiseinheit der Lichtstärke in einer bestimmten Richtung einer Strahlungsquelle, die eine monochromatische (einfärbige) Strahlung der Frequenz 540 THz aussendet und deren Strahlstärke in dieser Richtung (1/683) W/sr beträgt.
+
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Elektrische Ladungen, Ströme und Spannungen}
+
+\nqu{1. Wie groß sind die elektrischen Ladungen eines Protons und eines Elektrons?}
+Protonen sind Positiv mit der Elementarladung ($Q_{Proton}=+e$), Elektronen negativ mit der Elementarladung ($Q_{Elektron}=-e$) geladen.
+
+\nqu{2. Welche Erfahrung wird ausgedrückt, wenn wir sagen, die elektrische Ladung ist eine Erhaltungsgröße?}
+Ladung einer Polarität (positiv oder negativ) kann weder erzeugt, noch vernichtet werden.
+
+\nqu{3. Was sind Ionen}
+Ionen sind geladene Atome, Atome sind im Allgemeinen elektrisch neutral geladen. Diese haben in Ihren Schalen entweder Elektronen verloren oder hinzugewonnen.
+
+\nqu{4. Wie stellen Sie sich das ''Elektronengas'' in einem metallischen Leiter vor?}
+Das Elektronengas ist der ''Schwarm'' der quasi-frei beweglichen Elektronen in einem Metallischen Leiter.
+
+\nqu{5. Was versteht man unter ''mittleren Ladungsdichte''?}
+Sind die Ladungen in einem Körper nicht gleichmäßig verteilt so gibt die Größe $\varrho$ die mittlere Ladungsdichte an.
+\[\varrho = Q/V\]
+
+\nqu{6. Wie kann man eine ungleichförmige Ladungsverteilung in einem Körper beschreiben?}
+
+\nqu{7. Wie sind Überschussladungen in einem Metallkörper angeordnet?}
+In elektrisch gut leitfähigen Körpern, wie es Metalle sind, finden wir die Überschussladungen nie im Körperinneren, sondern in einer sehr dünnen Schicht an der Körperoberfläche.
+
+\nqu{8. Was versteht man unter ''Flächenladungsdichte''?}
+Um Überschussladungen an der Oberfläche zu beschreiben.
+\[\sigma=q/A\]
+
+\nqu{9. Was ist ein elektrischer Strom? Wodurch wird die elektrische Leitfähigkeit im wesentlichen bestimmt? Was versteht man unter einem Isolator?}
+Der Elektrische Strom ist der Transport von elektrischer Ladung. Da die elektrische Ladung immer an Teilchen gebunden ist (Ladungsträger), so ist dies auch gleichzeitig eine Bewegung von Ladungsträgern.
+
+Die elektrische Leitfähigkeit ist im wesentlichen dadurch bestimmt ob genug elektrische Ladungsträger vorhanden sind, wir sprechen von einem elektrischen Leiter. Ist dies nicht der Fall so sprechen wir von einem Isolator.
+
+\nqu{10. Was bedeutet ''elektrischer Kontakt''?}
+Wenn wir zwei elektrische Leiter in miteinander in Berührung bringen, so können von einem zum anderen Ladungsträger übertreten. Wir sprechen davon beide Körper befinden sich in elektrischem Kontakt. 
+
+\nqu{11. Wie ist die elektrische Stromstärke erklärt?}
+Die elektrische Stromstärke gibt die momentane Transportrate und die Richtung der elektrischen Ladung an. Die Einheit der elektrischen Stromstärke ist das Ampere (Einheitenzeichen A, 1A = 1C/s).
+\[I=Q/t\]
+
+
+\nqu{12. Was verstehen Sie unter der ''Richtung'' des elektrischen Stromes? Was bedeutet ''Bezugssinn'' und was ''Richtungssinn'' des elektrischen Stromes?}
+
+\nqu{13. Was verstehen Sie unter Gleichstrom und was unter Wechselstrom?}
+Bei Gleichstrom ändert sich die Stromstärke mit der Zeit nicht.
+Wechselstrom ändert sich zwar, ist aber im Zeitlichen Mittel Null.
+
+\nqu{14. Wie groß ist etwa die Driftgeschwindigkeit der Elektronen, wenn in einem Kupferdraht ein elektrischer Strom fließt?}
+Die Driftgeschwindigkeit der Elektronen in einem Kupferdraht ist ungefähr $v=0,073 mm/s$.
+
+\nqu{15. Warum können wir ei einem elektrischen Strom in Metallen den begleitenden Massentransport i.a. vernachlässigen? Warum kann der Massentransport bei Ionen eine Rolle spielen?}
+Der Massenstrom von Elektronen welcher für ein Ampere nötig wäre ist unmessbar klein ($\dot{m}=m_e\cdot \dot{N}_e=-5,6\cdot 10^{-12}kg/s$.
+Bei Ionen kann man diesen Massenstrom nicht vernachlässigen, da die Ionen zum Beispiel als flüssiger Leiter vorliegen können.
+
+\nqu{16. Was sind die wesentlichen Effekte elektrischer Ströme? Geben Sie jeweils Beispiele für ihre technische Nutzung an.}
+\begin{itemize}
+\item \textbf{Magnetfelder}
+
+In Generatoren zur Strom Erzeugung, in Motoren um Mechanische Bewegung zu erzeugen.
+
+\item \textbf{Erwärmung von Leitern bei Stromdurchgang}
+
+Heizen und Kochen
+
+\item \textbf{Chemische Wirkungen}
+
+Galvanotechnik und Elektrolyse.
+
+\end{itemize}
+
+\nqu{17. Wie heißt die Basiseinheit der elektrischen Stromstärke und wie ist sie definiert? Welchen Wert hat die magnetische Feldkonstante?}
+Die Basiseinheit 1 Ampere (Einheitenzeichen A) ist die Stärke eines zeitlich unveränderlichen Stromes, der, durch zwei im Vakuum parallel im Abstand von 1 Meter voneinander angeordnete geradlinige, unendlich lange Leiter von vernachlässigbar kleinem, kreisförmigen Querschnitt fließend, zwischen diesen Leitern je 1 Meter Leiterlänge elektrodynamisch die Kraft von $2\cdot 10^{-7}$ Newton hervorrufen würde.
+
+Die magnetische Feldkonstante ist $\mu_0 = 4\pi \cdot 10^{-7} N/A^2$-
+
+\[\frac{F}{l} = \mu_0\frac{I_1I_2}{2\pi r}\]
+
+Abb6.4
+
+\nqu{18. Was verstehen Sie unter dem Begriff der ''elektrischen Spannung''? Auf welche Weise lässt sich die elektrische Spannung als Kurvensumme darstellen?}
+
+
+\nqu{19. Unter welchen Bedingungen kann man von der elektrischen Spannung zwischen zwei Punkten sprechen?}
+
+\nqu{20. Was bedeuten ''Bezugssinn'' und ''Richtungssinn'' im Zusammenhang mit der elektrischen Spannung?}
+
+\nqu{21. Wie nennt man die Einheit der elektrischen Spannung und wie wird sie erklärt?}
+
+\nqu{22. Wie werden Teilspannungen entlang einer Kurve zur Gesamtspannung zusammengesetzt? Welche Polle spielt dabei der Bezugssinn?}
+
+\nqu{23. Was verstehen Sie unter Gleichspannung und was unter Wechselspannung?}
+
+\nqu{24. Was ist eine Spannungsquelle und was bewirkt sie? Geben Sie Beispiele an.}
+
+\nqu{25. Wie nennt man Geräte zur Messung der elektrischen Spannung und zur Messung der elektrischen Stromstärke? Welsche Bedingungen müssen diese Geräte erfüllen, damit die Zustände im zu messenden Stromkreis möglichst wenig gestört werden?}
+
+\nqu{26. Wie bestimmen Sie bei bekannten Werten von Strom und Spannung die Momentanleistung? Wie ist ihr Zusammenhang mit der umgesetzten Energiemenge?}
+
+\nqu{27. Welche Rolle spielen bei der Berechnung der Leistung die Bezugssinne und Richtungssinne von Strom und Spannung?}
+
+\nqu{28. Was verstehen Sie unter einer Spannungs-Strom-Kennlinie?}
+
+\nqu{29. Wie lautet das Ohmsche Gesetz im engeren und weiteren Sinn? Welche Rolle spielen die Bezugssinne von Strom und Spannung bei der Formulierung des Ohmschen Gesetzes?}
+
+\nqu{30. Wie heißt die Einheit des elektrischen Widerstandes und wie ist sie erklärt?}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Physikalische Größen, Einheiten und Dimensionen}
+
+\nqu{1. Was verstehen Sie im allgemeinen unter einer physikalischen Größe und wodurch unterscheiden sich physikalische Größenwerte von gewöhnlichen Zahlen?}
+
+\nqu{2. Wie werden die Werte physikalischer Größen dargestellt?}
+
+\nqu{3. Was verstehen Sie unter der ''Einheit'' einer physikalischen Größe? Auf welche Weise werden Basiseinheit zu abgeleiteten Einheiten kombiniert?}
+
+\nqu{4. Was versteht man unter einer Einheitentransformation und wie ändert sich dabei der Zahlenwert eines Größenwertes? Worauf beruht diese Umrechnung?}
+
+\nqu{5. Was verstehen Sie unter einem kohärenten Einheitensystem?}
+
+\nqu{6. Was ist der Unterschied zwischen ''Dimension'' und ''Einheit'' einer physikalischen Größe?}
+
+\nqu{7. Welche Einheiten sind SI-Basiseinheiten und wie sind sie definiert? Welche abgeleiteten SI-Einheitenmit besonderem Namen und besonderem Zeichen kennen Sie?}
+
+\nqu{8. Wie heißen die international festgelegten Vorsätze, welche Zeichen werden dafür verwendet und welche Zahlenfaktoren kürzen sie ab? In welchem Sinn nimmt das Kilogramm bezüglich der Vorsatzzeichen eine Sonderstellung ein?}
+
+\nqu{9. Warum sind Einheiten, die aus kohärenten SI-Einheiten mit Vorsätzen gebildet werden, keine kohärenten Einheiten des SI?}
+
+\nqu{10. Welche gebräuchlichen Einheiten außerhalb des SI kennen Sie?}
+
+\nqu{11. Welche Werte besitzen die folgenden physikalischen Konstanten (auf jeweils drei Stellen gerundet): Vakuumlichtgeschwindigkeit, Elementarladung, Ruhemasse des Elektrons, Ruhemasse des Protons, magnetische Feldkonstante, elektrische Feldkonstante, Avogadro-Konstante, Boltzmann-Konstante, Planck-Konstante?}
+\begin{table}[h]
+\centering
+\begin{tabular}{||l|l||}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Name & Wert \\ 
+\hline 
+\hline
+\rule[-1ex]{0pt}{2.5ex} Vakuumlichtgeschwindigkeit & $c_0 = 299~792~458~m/s$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Elementarladung & $1,602~189\cdot 10^{-19}As$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Ruhemasse des Elektrons & $m_e =9,109~534\cdot 10^{-31}kg$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Ruhemasse des Protons & $m_p =1,672~648~5\cdot 10^{-27}kg$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Magnetische Feldkonstante & $\mu_0=4\pi\cdot 10^{-7} Vs/(Am)$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Elektrische Feldkonstante & $\epsilon_0=(\mu_0c_0^2)^{-1}$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Avogadro-Konstante & $N_A=6,022~135~8\cdot10^{-23}~/mol$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Boltzmann-Konstante & $k=1,380~622\cdot10^{-23}J/K$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Planck-Konstante & $h=6,626~176\cdot10^{-34}Js$ \\ 
+\hline 
+\end{tabular} 
+
+\end{table}
+\nqu{12. Was müssen Sie beim Ausführen von Operationen mit additiven Charakter bezüglich physikalischer Größen beachten?}
+
+\nqu{13. Was versteht man unter einer Größengleichung? Welchen Vorteil bietet sie konsequente Verwendung kohärenter Einheiten?}
+
+\nqu{14. Warum muss der Definitionsbereich von Funktionen wie $sin(\cdot$), $ln(\cdot)$ usw. immer aus Größen der Dimension $1_D$ bestehen? Welche Dimension ist den Größen des Wertebereichs dieser Funktionen zugeordnet?}
+
+\nqu{15. Wozu dienen Zahlenwertgleichungen und was ist bei ihrer Verwendung zu beachten?}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Stromkreise und einfache Stromkreiselemente}
+
+
+\nqu{1. Wie lässt sich der Satz von der Erhaltung der elektrischen Ladung allgemein formulieren?}
+
+\nqu{2. Was verstehen Sie unter konzentrierten Stromkreiselementen? Geben Sie Beispiele an.}
+
+\nqu{3. Was ist eine elektrische Schaltung?}
+
+\nqu{4. Was bedeutet der Begriff ''Knoten'' in einer elektrischen Schaltung?}
+
+\nqu{5. Wie lautet die erste Kirchhoff-Regel? Unter welchen Voraussetzungen gilt sie?}
+
+\nqu{6. Wozu dienen Ersatzschaltungen?}
+
+\nqu{7. Mit welchem Argument lässt sich die 1.KR auf Schaltungsteile und auf ganze Schaltungen verallgemeinern und wie lautet diese Verallgemeinerung?}
+
+\nqu{8. Welche Rolle spielen die angenommenen Bezugssinne bei der Anwendung der 1.KR?}
+
+\nqu{9. Warum ergeben sich vei der Anwendung der 1.KR u.U. voneinander abhängige Gleichungen?}
+
+\nqu{10. Welche Beziehung liefert die 1.KR bei der Analyse von Schaltungen?}
+
+\nqu{11. Wie wird die elektrische Spannung zwischen zwei Anschlüssen eines konzentrierten Stromkreiselements definiert? Unter welchen Voraussetzungen ist dies sinnvoll?}
+
+\nqu{12. Was bedeutet der Begriff ''Masche'' in einer elektrischen Schaltung?}
+
+\nqu{13. Wie lautet die zweite Kirchhoff-Regel? Unter welchen Voraussetzungen gilt sie?}
+
+\nqu{14. Welche Rolle spielen die angenommenen Bezugssinne bei der Anwendung der 2.KR?}
+
+\nqu{15. Warum ergeben sich bei der Anwendung der 2.KR u.U. voneinander abhängige Gleichungen?}
+
+\nqu{16. Welche Beziehungen liefert die 2.KR. bei der Analyse von Schaltungen?}
+
+\nqu{17. Warum reichen die beiden Kirchhoff-Regeln allein zur vollständigen Analyse von Schaltungen i.a. nicht aus?}
+
+\nqu{18. Was verstehen Sie unter einem elektrischen Widerstand als einem idealen Stromkreiselement?}
+
+\nqu{19. Wie lautet die beschreibende Gleichung (Elementargleichung) für ideale Widerstände? Was müssen Sie bei Ihrer Angabe hinsichtlich der Bezugssinne beachten?}
+
+\nqu{20. Wie ist der elektrische Leitwert erklärt und welche Einheit besitzt er im Internationalen Einheitensystem?}
+%---------------------------------------------------------------------------------------
+
+\chapter{Das elektrische Feld}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Schaltungen mit Kondensatoren}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Ergänzendes zum elektrischen Feld}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Verteilte elektrische Ströme}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Elementare Methoden der Berechnung elektrischer Felder}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Globale und lokale Eigenschaften elektrischer Felder}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Magnetische Erscheinungen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Das magnetische Feld}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Elementare Methoden der Berechnung magnetischer Felder}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Magnetische Kreise}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{globale und lokale Eigenschaften magnetischer Felder}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Induktionserscheinungen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Schaltungen mit Spulen und Transformatoren}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Sinusschwingungen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Komplexe Behandlung von Wechselstromkreisen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Resonanzerscheinungen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Mehrphasensysteme}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Eas elektromagnetische Feld}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Elektromagnetische Wellen}
+
+%---------------------------------------------------------------------------------------
+
+\chapter{Energie im Elektromagnetismus}
+\end{document}
+
+
